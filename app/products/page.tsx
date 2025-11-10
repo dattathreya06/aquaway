@@ -26,8 +26,8 @@ const products = [
   {
     id: 1,
     name: "Water Purifier Elite",
-    price: "15,999",
-    image: "/premium-water-purifier-elite-model.jpg",
+    price: "12,999",
+    image: "/aquawayelite.jpg",
     description: "Premium water purifier with advanced RO and Alkaline technology",
     specs: [
       "RO + Alkaline Purification",
@@ -44,8 +44,8 @@ const products = [
   {
     id: 2,
     name: "RO+Alkaline Water Purifier",
-    price: "12,499",
-    image: "/alkaline-water-purifier.jpg",
+    price: "14,499",
+    image: "/aquawayro.jpg",
     description: "Advanced dual purification with alkaline water benefits",
     specs: [
       "RO + Alkaline Dual System",
@@ -63,7 +63,7 @@ const products = [
     id: 3,
     name: "Ultra Plus Water Purifier",
     price: "15,999",
-    image: "/ultra-plus-premium-water-purifier.jpg",
+    image: "/aquaway1.jpg",
     description: "Ultimate water purification with UV and mineral retention",
     specs: [
       "Premium RO + UV Technology",

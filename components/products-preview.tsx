@@ -5,16 +5,16 @@ const products = [
   {
     id: 1,
     name: "Water Purifier Elite",
-    price: "15,999",
-    image: "/water-purifier-home.jpg",
+    price: "12,999",
+    image: "/aquawayelite.jpg",
     features: ["RO + Alkaline", "Advanced filtration", "Smart display"],
     color: "from-primary/10 to-primary/5",
   },
   {
     id: 2,
     name: "RO+Alkaline Water Purifier",
-    price: "12,499",
-    image: "/alkaline-water-purifier.jpg",
+    price: "14,499",
+    image: "/aquawayro.jpg",
     features: ["Dual purification", "pH balance", "High capacity"],
     color: "from-secondary/10 to-secondary/5",
   },
@@ -22,7 +22,7 @@ const products = [
     id: 3,
     name: "Ultra Plus Water Purifier",
     price: "15,999",
-    image: "/ultra-plus-premium-water-purifier.jpg",
+    image: "/aquaway1.jpg",
     features: ["Premium RO", "UV sterilization", "Mineral retention"],
     color: "from-accent/10 to-accent/5",
   },
@@ -47,7 +47,7 @@ export default function ProductsPreview() {
               key={product.id}
               className={`bg-gradient-to-br ${product.color} rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:scale-105`}
             >
-              <div className="h-64 overflow-hidden bg-white">
+              <div className="h-150 overflow-hidden bg-white">
                 <img
                   src={product.image || "/placeholder.svg"}
                   alt={product.name}

@@ -17,24 +17,24 @@ const ChevronRightIcon = () => (
 const slides = [
   {
     id: 1,
-    title: "Pure Water, Pure Health",
-    subtitle: "Advanced water purification technology for your family",
+    title: "",
+    subtitle: "",
     image: "/water-purifier-home.jpg",
-    cta: "Shop Now",
+    cta: "",
   },
   {
     id: 2,
-    title: "Alkaline Water Benefits",
-    subtitle: "Restore pH balance and boost immunity naturally",
-    image: "/alkaline-water-purifier.jpg",
-    cta: "Learn More",
+    title: "",
+    subtitle: "",
+    image: "/banner2.png",
+    cta: "",
   },
   {
     id: 3,
-    title: "Advanced RO Technology",
-    subtitle: "Remove 99.9% impurities with our elite RO systems",
-    image: "/ro-water-purifier-system.jpg",
-    cta: "Explore Products",
+    title: "",
+    subtitle: "",
+    image: "/banner1.png",
+    cta: "",
   },
 ]
 
@@ -52,7 +52,7 @@ export default function HeroSlider() {
   const prev = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length)
 
   return (
-    <div className="relative w-full h-96 md:h-[600px] overflow-hidden rounded-lg shadow-lg">
+    <div className="relative w-full h-120 md:h-[900px] overflow-hidden rounded-lg shadow-lg pt-8">
       {slides.map((slide, index) => (
         <div
           key={slide.id}
@@ -61,13 +61,13 @@ export default function HeroSlider() {
           }`}
         >
           <img src={slide.image || "/placeholder.svg"} alt={slide.title} className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-start p-6 md:p-12">
+          <div className="absolute inset-0  flex flex-col justify-center items-start p-6 md:p-12">
             <div className="max-w-2xl">
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 text-balance">{slide.title}</h2>
               <p className="text-lg md:text-xl text-white/90 mb-8">{slide.subtitle}</p>
-              <button className="px-8 py-3 bg-accent hover:bg-accent/90 text-accent-foreground font-bold rounded-lg transition-all transform hover:scale-105">
+              {/* <button className="px-8 py-3 bg-accent hover:bg-accent/90 text-accent-foreground font-bold rounded-lg transition-all transform hover:scale-105">
                 {slide.cta}
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
