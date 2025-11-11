@@ -106,7 +106,7 @@ export default function Navigation() {
       {/* CTA Buttons */}
       <div className="hidden md:flex items-center gap-3">
         <a
-          href="tel:+919876543210"
+          href="tel:+919885229399"
           className="inline-flex items-center gap-2 px-5 py-3 rounded-lg  transition-all font-medium shadow-md"
           style={{
               background: "#000",
@@ -117,7 +117,7 @@ export default function Navigation() {
           <span className="hidden lg:inline" >Call Now</span>
         </a>
         <a
-          href="https://wa.me/919876543210"
+          href="https://wa.me/919885229399"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-gradient-to-r from-[#7C7C7C] to-[#A2A2A2] text-white hover:opacity-90 transition-all font-medium shadow-md"
@@ -154,14 +154,14 @@ export default function Navigation() {
 
           <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-border">
             <a
-              href="tel:+919876543210"
+              href="tel:+919885229399"
               className="w-full inline-flex items-center justify-center gap-3 px-5 py-3 rounded-lg bg-[#0156dd] text-white hover:bg-[#1f75fe] transition-all font-medium shadow-md"
             >
               <PhoneIcon />
               Call Now
             </a>
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919885229399"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full inline-flex items-center justify-center gap-3 px-5 py-3 rounded-lg bg-gradient-to-r from-[#7C7C7C] to-[#A2A2A2] text-white hover:opacity-90 transition-all font-medium shadow-md"

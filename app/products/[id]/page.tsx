@@ -280,7 +280,7 @@ export default async function ProductDetails({ params }: { params: Promise<{ id:
             <p className="text-2xl font-semibold mb-4 text-black">₹{product.price}</p>
             <p className="text-gray-100 mb-6 leading-relaxed">{product.description}</p>
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/+919885229399"
               className="inline-block bg-black text-white hover:bg-gray-800 px-8 py-3 rounded-lg font-semibold transition-all"
             >
               Enquire Now

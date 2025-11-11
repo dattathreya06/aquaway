@@ -42,7 +42,7 @@ export default function CTASection() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           {/* Phone Button */}
           <a
-            href="tel:+919876543210"
+            href="tel:+919885229399"
             className="inline-flex items-center justify-center gap-3 px-8 py-4 font-bold rounded-lg transition-all transform hover:scale-105 text-lg shadow-lg"
             style={{
               background: "linear-gradient(to right, #7C7C7C, #A2A2A2)",
@@ -50,12 +50,12 @@ export default function CTASection() {
             }}
           >
             <PhoneIcon />
-            Call: +91 98765 43210
+            Call: +91 98852 29399
           </a>
 
           {/* WhatsApp Button */}
           <a
-            href="https://wa.me/919876543210"
+            href="https://wa.me/919885229399"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 px-8 py-4 font-bold rounded-lg transition-all transform hover:scale-105 text-lg shadow-lg"

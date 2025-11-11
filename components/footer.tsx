@@ -108,7 +108,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <PhoneIcon />
-                <a href="tel:+919876543210" className="hover:text-black transition-colors">
+                <a href="tel:+919885229399" className="hover:text-black transition-colors">
                   +91 98765 43210
                 </a>
               </li>
@@ -136,7 +136,7 @@ export default function Footer() {
               <FacebookIcon />
             </a>
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919885229399"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
