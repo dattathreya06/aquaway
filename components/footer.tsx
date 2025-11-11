@@ -47,7 +47,7 @@ export default function Footer() {
             <Link href="/" className="mb-6 inline-block">
               <div className="w-56 h-24 relative">
                 <Image
-                  src="/aqualogo.png"
+                  src="/a-logo.png"
                   alt="Aquaway Logo"
                   fill
                   className="object-contain"

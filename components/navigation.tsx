@@ -81,7 +81,7 @@ export default function Navigation() {
       >
         <div className="w-50 h-20 relative">
           <Image
-            src="/aqualogo.png"
+            src="/a-logo.png"
             alt="Aquaway Logo"
             fill
             className="object-contain"

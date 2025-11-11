@@ -99,12 +99,12 @@ export default function ProductsPreview() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href="/products"
-                  className="inline-block px-6 py-2 bg-black text-white hover:bg-gray-800 rounded-lg font-semibold transition-colors"
-                >
+               <Link href={`/products/${product.id}`}>
+                <button className="inline-block px-6 py-2 bg-black text-white hover:bg-gray-800 rounded-lg font-semibold transition-colors">
                   View Details
-                </Link>
+                </button>
+              </Link>
+
               </div>
             </div>
           ))}
