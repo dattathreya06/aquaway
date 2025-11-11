@@ -71,103 +71,109 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-border shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          {/* Logo */}
+<nav className="sticky top-0 z-50 bg-[#cecece] border-b border-border shadow-lg">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex justify-between items-center h-20">
+      {/* Logo */}
+      <Link
+        href="/"
+        className="flex items-center gap-2 hover:opacity-80 transition"
+      >
+        <div className="w-50 h-20 relative">
+          <Image
+            src="/aqualogo.png"
+            alt="Aquaway Logo"
+            fill
+            className="object-contain"
+            priority
+          />
+        </div>
+      </Link>
+
+      {/* Desktop Menu */}
+      <div className="hidden md:flex items-center gap-1">
+        {links.map((link) => (
           <Link
-            href="/"
-            className="flex items-center gap-2 hover:opacity-80 transition"
+            key={link.href}
+            href={link.href}
+            className="px-4 py-2 rounded-md text-black hover:bg-black/10 hover:text-black/80 transition-all duration-200 text-sm font-medium"
           >
-            <div className="w-50 h-20 relative">
-              <Image
-                src="/logo.jpg"
-                alt="Aquawaylogo"
-                fill
-                className="object-contain"
-              />
-            </div>
+            {link.label}
           </Link>
+        ))}
+      </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-1">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:bg-muted hover:text-primary transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
+      {/* CTA Buttons */}
+      <div className="hidden md:flex items-center gap-3">
+        <a
+          href="tel:+919876543210"
+          className="inline-flex items-center gap-2 px-5 py-3 rounded-lg  transition-all font-medium shadow-md"
+          style={{
+              background: "#000",
+              color: "white",
+            }}
+        >
+          <PhoneIcon />
+          <span className="hidden lg:inline" >Call Now</span>
+        </a>
+        <a
+          href="https://wa.me/919876543210"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-gradient-to-r from-[#7C7C7C] to-[#A2A2A2] text-white hover:opacity-90 transition-all font-medium shadow-md"
+        >
+          <MessageIcon />
+          <span className="hidden lg:inline">WhatsApp</span>
+        </a>
+      </div>
 
-          {/* CTA Buttons */}
-          <div className="hidden md:flex items-center gap-2">
+      {/* Mobile Menu Button */}
+      <button
+        className="md:hidden p-2 rounded-md text-black hover:bg-black/10 transition-colors"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle menu"
+      >
+        {isOpen ? <XIcon /> : <MenuIcon />}
+      </button>
+    </div>
+
+    {/* Mobile Menu */}
+    {isOpen && (
+      <div className="md:hidden pb-6 pt-4 bg-[#cecece] border-t border-border">
+        <div className="flex flex-col gap-3">
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="px-4 py-3 text-black hover:bg-black/10 hover:text-black/80 transition-all text-base font-medium"
+              onClick={() => setIsOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
+
+          <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-border">
             <a
               href="tel:+919876543210"
-              className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium"
+              className="w-full inline-flex items-center justify-center gap-3 px-5 py-3 rounded-lg bg-[#0156dd] text-white hover:bg-[#1f75fe] transition-all font-medium shadow-md"
             >
               <PhoneIcon />
-              <span className="hidden lg:inline">Call Now</span>
+              Call Now
             </a>
             <a
               href="https://wa.me/919876543210"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-colors text-sm font-medium"
+              className="w-full inline-flex items-center justify-center gap-3 px-5 py-3 rounded-lg bg-gradient-to-r from-[#7C7C7C] to-[#A2A2A2] text-white hover:opacity-90 transition-all font-medium shadow-md"
             >
               <MessageIcon />
-              <span className="hidden lg:inline">WhatsApp</span>
+              WhatsApp
             </a>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 rounded-md text-foreground hover:bg-muted"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <XIcon /> : <MenuIcon />}
-          </button>
         </div>
-
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="md:hidden pb-4">
-            <div className="flex flex-col gap-2">
-              {links.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:bg-muted hover:text-primary transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <div className="flex flex-col gap-2 mt-2 pt-2 border-t border-border">
-                <a
-                  href="tel:+919876543210"
-                  className="w-full inline-flex items-center justify-center gap-2 px-3 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium"
-                >
-                  <PhoneIcon />
-                  Call Now
-                </a>
-                <a
-                  href="https://wa.me/919876543210"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 px-3 py-2 rounded-md bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-colors text-sm font-medium"
-                >
-                  <MessageIcon />
-                  WhatsApp
-                </a>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
-    </nav>
+    )}
+  </div>
+</nav>
   );
 }
