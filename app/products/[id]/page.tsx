@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
-
+import { ShoppingCart, Store, Package, MapPin, Handshake } from 'lucide-react';
 const products = [
   {
     id: 1,
@@ -243,7 +243,30 @@ const products = [
   },
 ];
 
-
+const cards = [
+    {
+      icon: <ShoppingCart className="w-8 h-8" />,
+      title: 'AQUAWAY Online Store',
+      subtitle: 'AQUAWAY',
+    },
+   
+ 
+    {
+      icon: <Package className="w-8 h-8" />,
+      title: 'Request a Demo',
+      subtitle: '',
+    },
+    {
+      icon: <MapPin className="w-8 h-8" />,
+      title: 'Find Dealer',
+      subtitle: '',
+    },
+    {
+      icon: <Handshake className="w-8 h-8" />,
+      title: 'Become Partner',
+      subtitle: '',
+    },
+  ];
 
 
 const CheckIcon = () => (
@@ -280,7 +303,7 @@ export default async function ProductDetails({ params }: { params: Promise<{ id:
             <p className="text-2xl font-semibold mb-4 text-black">₹{product.price}</p>
             <p className="text-gray-100 mb-6 leading-relaxed">{product.description}</p>
             <a
-              href="https://wa.me/+919885229399"
+              href="https://wa.me/+918926189189"
               className="inline-block bg-black text-white hover:bg-gray-800 px-8 py-3 rounded-lg font-semibold transition-all"
             >
               Enquire Now
@@ -288,7 +311,82 @@ export default async function ProductDetails({ params }: { params: Promise<{ id:
           </div>
         </div>
       </section>
+<section className="py-12 md:py-20 bg-gradient-to-b from-gray-900 to-black">
+  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    {/* Main Heading */}
+    <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      Why Choose an RO Water Purifier?
+    </h2>
 
+    {/* Intro Paragraph */}
+    <p className="text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed">
+      Impure water acts as a silent threat to your health, gradually leading to serious illnesses. 
+      Contaminated water is responsible for diseases such as <strong>Cholera, Dysentery, Diarrhoea, Jaundice, Typhoid, Tuberculosis</strong>, 
+      and in extreme cases, even <strong>Cancer</strong>.
+    </p>
+
+    {/* Statistics */}
+    <div className="mb-12 text-left md:text-center max-w-3xl mx-auto">
+      <p className="text-gray-300 font-medium mb-4">In India, the impact is alarming:</p>
+      <ul className="space-y-3 text-gray-200">
+        <li>✓ Over <strong>37.7 million people</strong> suffer from waterborne diseases every year.</li>
+        <li>✓ More than <strong>1.5 million children</strong> lose their lives annually due to diarrhoea alone.</li>
+        <li>✓ <strong>80% of stomach-related illnesses</strong> in the country are linked directly to polluted drinking water.</li>
+      </ul>
+    </div>
+
+    {/* Rising Impurities Section */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Card 1 */}
+      <div
+        className="p-8 rounded-xl shadow-lg hover:shadow-2xl transition-transform transform hover:scale-[1.03]"
+        style={{ background: "linear-gradient(to right, #7C7C7C, #A2A2A2)" }}
+      >
+        <h3 className="text-xl font-bold mb-3 text-white">Groundwater Contamination</h3>
+        <p className="text-gray-100">
+          Excessive use of pesticides and fertilizers has introduced dangerous chemicals like 
+          <strong> arsenic, fluoride, and lead</strong> into borewell water.
+        </p>
+      </div>
+
+      {/* Card 2 */}
+      <div
+        className="p-8 rounded-xl shadow-lg hover:shadow-2xl transition-transform transform hover:scale-[1.03]"
+        style={{ background: "linear-gradient(to right, #7C7C7C, #A2A2A2)" }}
+      >
+        <h3 className="text-xl font-bold mb-3 text-white">River Water Pollution</h3>
+        <p className="text-gray-100">
+          Industrial waste and agricultural runoff release harmful pesticides and chemicals into rivers, 
+          making the water unsafe for drinking.
+        </p>
+      </div>
+
+      {/* Card 3 */}
+      <div
+        className="p-8 rounded-xl shadow-lg hover:shadow-2xl transition-transform transform hover:scale-[1.03]"
+        style={{ background: "linear-gradient(to right, #7C7C7C, #A2A2A2)" }}
+      >
+        <h3 className="text-xl font-bold mb-3 text-white">Rusted Pipelines</h3>
+        <p className="text-gray-100">
+          Municipal water travels through old, corroded pipes and unclean overhead tanks, 
+          picking up rust particles and bacteria along the way.
+        </p>
+      </div>
+    </div>
+
+    {/* Closing Statement */}
+    <div className="mt-12 max-w-4xl mx-auto">
+      <p className="text-lg md:text-xl text-gray-100 font-medium leading-relaxed">
+        These invisible impurities <strong>cannot be removed by boiling or ordinary filters</strong>. 
+        Only <strong>Reverse Osmosis (RO) technology</strong> can effectively eliminate dissolved salts, 
+        heavy metals, pesticides, and harmful chemicals—delivering <strong>100% safe and pure drinking water</strong>.
+      </p>
+      <p className="mt-6 text-2xl font-bold text-white">
+        Make the smart choice—install an RO water purifier today and protect your family from the hidden dangers of impure water.
+      </p>
+    </div>
+  </div>
+</section>
       {/* FEATURES SECTION */}
       <section className="py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -310,6 +408,41 @@ export default async function ProductDetails({ params }: { params: Promise<{ id:
           </div>
         </div>
       </section>
+      <section className="py-12 md:py-16 bg-gray-900">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
+          Where To Buy
+        </h2>
+
+        {/* 2-column grid on md+ (matches the screenshot) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          {cards.map((card, idx) => (
+            <div
+              key={idx}
+              className="flex flex-col items-center justify-center p-6 rounded-xl
+                         bg-gradient-to-r from-[#7C7C7C] to-[#A2A2A2]
+                         text-white hover:shadow-xl transition-shadow"
+            >
+              {/* Icon + optional subtitle (only first 3 cards have a subtitle) */}
+              <div className="mb-4">
+                {card.subtitle ? (
+                  <div className="flex flex-col items-center gap-2">
+                    {card.icon}
+                    <span className="text-sm opacity-80">{card.subtitle}</span>
+                  </div>
+                ) : (
+                  card.icon
+                )}
+              </div>
+
+              <h3 className="text-lg md:text-xl font-semibold">
+                {card.title}
+              </h3>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 
       {/* SPECIFICATIONS SECTION */}
       <section

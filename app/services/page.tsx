@@ -123,7 +123,7 @@ export default function ServicesPage() {
                 href="tel:+919876543210"
                 className="inline-block px-8 py-3 bg-black text-white hover:bg-gray-800 font-bold rounded-lg transition-all"
               >
-                Call: +91 98765 43210
+                Call: +91 8926189189
               </a>
               <a
                 href="https://wa.me/919876543210"

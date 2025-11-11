@@ -200,7 +200,7 @@ export default function ServiceRequestPage() {
             <div className="mt-8 p-4 bg-muted rounded-lg">
               <p className="text-sm text-muted-foreground">
                 <strong>Note:</strong> Our service team typically responds within 2-4 hours during business hours. For
-                urgent issues, please call us directly at +91 98765 43210.
+                urgent issues, please call us directly at +91 8926189189.
               </p>
             </div>
           </div>

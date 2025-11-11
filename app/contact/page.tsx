@@ -101,7 +101,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold text-white mb-2">Phone</h3>
                     <a href="tel:+919876543210" className="text-gray-100 hover:text-white transition">
-                      +91 98765 43210
+                      +91 8926189189
                     </a>
                   </div>
                 </div>
@@ -110,8 +110,8 @@ export default function ContactPage() {
                   <div className="mt-1">{<MailIcon />}</div>
                   <div>
                     <h3 className="font-bold text-white mb-2">Email</h3>
-                    <a href="mailto:info@aquaway.com" className="text-gray-100 hover:text-white transition">
-                      info@aquaway.com
+                    <a href="mailto:aquawaytechnologies1@gmail.com" className="text-gray-100 hover:text-white transition">
+                    aquawaytechnologies1@gmail.com
                     </a>
                   </div>
                 </div>

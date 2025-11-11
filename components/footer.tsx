@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { InstagramIcon, YoutubeIcon } from "lucide-react";
 
 const MapPinIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
@@ -47,7 +48,7 @@ export default function Footer() {
             <Link href="/" className="mb-6 inline-block">
               <div className="w-56 h-24 relative">
                 <Image
-                  src="/a-logo.png"
+                  src="/aqualogo.png"
                   alt="Aquaway Logo"
                   fill
                   className="object-contain"
@@ -108,14 +109,14 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <PhoneIcon />
-                <a href="tel:+919885229399" className="hover:text-black transition-colors">
-                  +91 98765 43210
+                <a href="tel:+918926189189" className="hover:text-black transition-colors">
+                  +91 8926189189
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <MailIcon />
-                <a href="mailto:info@aquaway.com" className="hover:text-black transition-colors">
-                  info@aquaway.com
+                <a href="mailto:aquawaytechnologies1@gmail.com" className="hover:text-black transition-colors">
+                  aquawaytechnologies1@gmail.com
                 </a>
               </li>
             </ul>
@@ -128,15 +129,31 @@ export default function Footer() {
         
         >
           <div className="flex justify-center gap-5 mb-8 pt-6">
-            <a
+            {/* <a
               href="#"
               aria-label="Facebook"
               className="bg-white/10 hover:bg-white/20 backdrop-blur-sm p-4 rounded-full transition-all duration-300 shadow-lg"
             >
               <FacebookIcon />
+            </a> */}
+             <a
+              href="https://www.instagram.com/aquaway_technologies?igsh=MTFuczltNTlvbzgxaw=="
+              aria-label="Instagram"
+              target="_blank"
+              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm p-4 rounded-full transition-all duration-300 shadow-lg"
+            >
+              <InstagramIcon />
+            </a>
+             <a
+              href="https://youtube.com/@aquawaytechnologies?si=aElJY7hDV3RLhzT5"
+              target="_blank"
+              aria-label="Youtube"
+              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm p-4 rounded-full transition-all duration-300 shadow-lg"
+            >
+              <YoutubeIcon />
             </a>
             <a
-              href="https://wa.me/919885229399"
+              href="https://wa.me/918926189189"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
