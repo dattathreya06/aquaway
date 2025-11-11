@@ -19,21 +19,21 @@ const slides = [
     id: 1,
     title: "",
     subtitle: "",
-    image: "/water-purifier-home.jpg",
+    image: "/bn1.png",
     cta: "",
   },
   {
     id: 2,
     title: "",
     subtitle: "",
-    image: "/banner2.png",
+    image: "/bn2.png",
     cta: "",
   },
   {
     id: 3,
     title: "",
     subtitle: "",
-    image: "/banner1.png",
+    image: "/bn3.png",
     cta: "",
   },
 ]
@@ -56,10 +56,14 @@ export default function HeroSlider() {
       {slides.map((slide, index) => (
         <div
           key={slide.id}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
+          className={`absolute inset-0 transition-opacity duration-1000 flex items-center justify-center text-white ${
             index === current ? "opacity-100" : "opacity-0"
           }`}
-        >
+          style={{
+            background: "linear-gradient(to right, #7C7C7C, #A2A2A2)",
+            color: "#fff",
+          }}
+>
           <img src={slide.image || "/placeholder.svg"} alt={slide.title} className="w-full h-full object-cover" />
           <div className="absolute inset-0  flex flex-col justify-center items-start p-6 md:p-12">
             <div className="max-w-2xl">
