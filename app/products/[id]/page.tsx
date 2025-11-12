@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
+import Link from "next/link";
 import { ShoppingCart, Store, Package, MapPin, Handshake } from 'lucide-react';
 const products = [
   {
@@ -408,41 +409,57 @@ export default async function ProductDetails({ params }: { params: Promise<{ id:
           </div>
         </div>
       </section>
-      <section className="py-12 md:py-16 bg-gray-900">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
-          Where To Buy
-        </h2>
+  <section className="py-12 md:py-16 bg-gray-900">
+  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
+      Where To Buy
+    </h2>
 
-        {/* 2-column grid on md+ (matches the screenshot) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-          {cards.map((card, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col items-center justify-center p-6 rounded-xl
-                         bg-gradient-to-r from-[#7C7C7C] to-[#A2A2A2]
-                         text-white hover:shadow-xl transition-shadow"
-            >
-              {/* Icon + optional subtitle (only first 3 cards have a subtitle) */}
-              <div className="mb-4">
-                {card.subtitle ? (
-                  <div className="flex flex-col items-center gap-2">
-                    {card.icon}
-                    <span className="text-sm opacity-80">{card.subtitle}</span>
-                  </div>
-                ) : (
-                  card.icon
-                )}
-              </div>
+    {/* 2-column grid on md+ */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+      {cards.map((card, idx) => {
+        // Determine href based on title
+        const getHref = () => {
+          if (card.title === "AQUAWAY Online Store") return "/products";
+          if (
+            card.title === "Request a Demo" ||
+            card.title === "Find Dealer" ||
+            card.title === "Become Partner"
+          )
+            return "/contact";
+          return "#";
+        };
 
-              <h3 className="text-lg md:text-xl font-semibold">
-                {card.title}
-              </h3>
+        return (
+          <Link
+            key={idx}
+            href={getHref()}
+            className="flex flex-col items-center justify-center p-6 rounded-xl
+                       bg-gradient-to-r from-[#7C7C7C] to-[#A2A2A2]
+                       text-white hover:shadow-xl transition-all transform hover:scale-[1.02]
+                       focus:outline-none focus:ring-4 focus:ring-white/30"
+          >
+            {/* Icon + optional subtitle */}
+            <div className="mb-4">
+              {card.subtitle ? (
+                <div className="flex flex-col items-center gap-2">
+                  {card.icon}
+                  <span className="text-sm opacity-80">{card.subtitle}</span>
+                </div>
+              ) : (
+                card.icon
+              )}
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
+
+            <h3 className="text-lg md:text-xl font-semibold">
+              {card.title}
+            </h3>
+          </Link>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       {/* SPECIFICATIONS SECTION */}
       <section

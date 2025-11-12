@@ -50,7 +50,7 @@ export default function CTASection() {
             }}
           >
             <PhoneIcon />
-            Call: +91 98852 29399
+            Call: +91 8926189189
           </a>
 
           {/* WhatsApp Button */}
