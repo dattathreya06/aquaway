@@ -81,6 +81,20 @@ export default function ContactPage() {
             <div>
               <h2 className="text-3xl font-bold text-white mb-8">Get In Touch</h2>
 
+              {/* Google Map */}
+              <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.4230408657195!2d78.5518923749186!3d17.34336510407228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9900118ce09d%3A0xa0782ea85799936e!2sAquaway%20Technologies!5e0!3m2!1sen!2sin!4v1762923348183!5m2!1sen!2sin"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen={false}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Location Map"
+                />
+              </div>
+
               <div className="space-y-6">
                 <div className="flex gap-4">
                   <div className="mt-1">{<MapPinIcon />}</div>
